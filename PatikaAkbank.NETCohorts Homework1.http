@@ -1,0 +1,6 @@
+@PatikaAkbank.NETCohorts_Homework1_HostAddress = http://localhost:5271
+
+GET {{PatikaAkbank.NETCohorts_Homework1_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
