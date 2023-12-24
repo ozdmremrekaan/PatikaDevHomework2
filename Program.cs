@@ -1,3 +1,5 @@
+using PatikaAkbank.NETCohorts_Homework1.Middlewares;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -16,10 +18,21 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+
 app.UseHttpsRedirection();
+
+app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllers();
+// Global Loglama Middleware eklemek
+app.UseMiddleware<LoggerMiddleware>();
 
-app.Run();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
+
+// Global Exception Middleware eklemek
+app.UseExceptionHandler("/error");
