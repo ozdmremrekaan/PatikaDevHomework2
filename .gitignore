@@ -363,5 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 
 #custom
-PatikaAkbank.NETCohorts Homework1.http
-Program.cs
+Class.cs
