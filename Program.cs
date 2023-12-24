@@ -28,6 +28,7 @@ app.UseAuthorization();
 
 // Global Loglama Middleware eklemek
 app.UseMiddleware<LoggerMiddleware>();
+app.UseExceptionHandler("/error");
 
 app.UseEndpoints(endpoints =>
 {
